@@ -101,29 +101,55 @@ function MintingPanel() {
         <Subtext style={{"fontSize": "48px", "lineHeight": "54px", "margin": "0", "color": "#aa5555"}}>MINT<br />NOT YET<br />ENABLED</Subtext>
       </MintBox>
     )
-  }
-  return (
-    <MintBox>
-      <Subtext>
-        1000 Pieces<br />
-        10 Max Mint<br />
-        1 Free Mint<br />
-        0.1 ETH Each<br />
-        </Subtext>
-        <InputInfo>
-        Amount to mint: <span style={{"color": "#78715E"}}>{amountToMint}</span>
-        </InputInfo>
-        <MintAmountSelectorContainer>
-          <MintAmountSelectorButton ref={selOne} onClick={() => setAmount(1)}>1</MintAmountSelectorButton>
-          <MintAmountSelectorButton ref={selFive} onClick={() => setAmount(5)}>5</MintAmountSelectorButton>
-          <MintAmountSelectorButton ref={selTen} onClick={() => setAmount(10)}>10</MintAmountSelectorButton>
-        </MintAmountSelectorContainer>
-        {/* <InputText {...inputProps} placeholder="10" type='number' min={1} max={10} step={1} /> */}
-        <MintButtonContainer>
-          <MintButton>Mint</MintButton>
-        </MintButtonContainer>
-      </MintBox>
-  )
+  } else if(mintStatus === "premint") {
+      return (
+        <MintBox>
+          <HeadingTwo>PRE-MINT</HeadingTwo>
+          <Subtext>
+            1000 Pieces<br />
+            10 Max Mint<br />
+            1 Free Mint<br />
+            0.1 ETH Each<br />
+            </Subtext>
+            <InputInfo>
+            Amount to mint: <span style={{"color": "#78715E"}}>{amountToMint}</span>
+            </InputInfo>
+            <MintAmountSelectorContainer>
+              <MintAmountSelectorButton ref={selOne} onClick={() => setAmount(1)}>1</MintAmountSelectorButton>
+              <MintAmountSelectorButton ref={selFive} onClick={() => setAmount(5)}>5</MintAmountSelectorButton>
+              <MintAmountSelectorButton ref={selTen} onClick={() => setAmount(10)}>10</MintAmountSelectorButton>
+            </MintAmountSelectorContainer>
+            {/* <InputText {...inputProps} placeholder="10" type='number' min={1} max={10} step={1} /> */}
+            <MintButtonContainer>
+              <MintButton>Mint</MintButton>
+            </MintButtonContainer>
+          </MintBox>
+        )
+    } else {
+      return (
+        <MintBox>
+          <HeadingTwo>PUBLIC MINT</HeadingTwo>
+          <Subtext>
+            1000 Pieces<br />
+            10 Max Mint<br />
+            1 Free Mint<br />
+            0.1 ETH Each<br />
+            </Subtext>
+            <InputInfo>
+            Amount to mint: <span style={{"color": "#78715E"}}>{amountToMint}</span>
+            </InputInfo>
+            <MintAmountSelectorContainer>
+              <MintAmountSelectorButton ref={selOne} onClick={() => setAmount(1)}>1</MintAmountSelectorButton>
+              <MintAmountSelectorButton ref={selFive} onClick={() => setAmount(5)}>5</MintAmountSelectorButton>
+              <MintAmountSelectorButton ref={selTen} onClick={() => setAmount(10)}>10</MintAmountSelectorButton>
+            </MintAmountSelectorContainer>
+            {/* <InputText {...inputProps} placeholder="10" type='number' min={1} max={10} step={1} /> */}
+            <MintButtonContainer>
+              <MintButton>Mint</MintButton>
+            </MintButtonContainer>
+          </MintBox>
+        )
+    }
 }
 
 function App() {
