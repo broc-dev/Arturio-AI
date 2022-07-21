@@ -18,6 +18,7 @@ import sampleOne from "./art-sample.png";
 import sampleTwo from "./curated.png";
 
 import logoDesign from "./logo-design.png";
+import webDesign from "./web-design.png";
 
 import { addresses, abis } from "@my-app/contracts";
 
@@ -112,16 +113,11 @@ function MintingPanel() {
             0.1 ETH Each<br />
             </Subtext>
             <InputInfo>
-            Amount to mint: <span style={{"color": "#78715E"}}>{amountToMint}</span>
+            Amount to mint: <span style={{"color": "#78715E"}}>2</span>
             </InputInfo>
-            <MintAmountSelectorContainer>
-              <MintAmountSelectorButton ref={selOne} onClick={() => setAmount(1)}>1</MintAmountSelectorButton>
-              <MintAmountSelectorButton ref={selFive} onClick={() => setAmount(5)}>5</MintAmountSelectorButton>
-              <MintAmountSelectorButton ref={selTen} onClick={() => setAmount(10)}>10</MintAmountSelectorButton>
-            </MintAmountSelectorContainer>
             {/* <InputText {...inputProps} placeholder="10" type='number' min={1} max={10} step={1} /> */}
             <MintButtonContainer>
-              <MintButton>Mint</MintButton>
+              <MintButton>Premint</MintButton>
             </MintButtonContainer>
           </MintBox>
         )
@@ -228,9 +224,9 @@ function App() {
           <AboutItem>
             <div>
               <HeadingTwo>WEB DESIGN</HeadingTwo>
-              <Subtext>Arturio was given a prompt of "Clean lines logo mark using white and yellow ochre for an AI art project" to come up with the current design of the logo</Subtext>
+              <Subtext>Arturio was given a prompt of "Modern dark gray and deep blue themed NFT project website" to come up with the basic design of the website</Subtext>
             </div>
-            {/* <Image src={webDesign} /> */}
+            <Image src={webDesign} />
           </AboutItem>
         </AboutSection>
         <FooterSection>
@@ -246,9 +242,9 @@ function App() {
             <FooterTitle>INFORMATION</FooterTitle>
             <FooterLink href="#about">About</FooterLink>
             <FooterLink href="#">Contact</FooterLink>
-            <FooterLink href="#">GitHub</FooterLink>
-            <FooterLink href="#">Privacy Policy</FooterLink>
-            <FooterLink href="#">Terms of Use</FooterLink>
+            <FooterLink href="https://github.com/broc-dev/Arturio-AI">GitHub</FooterLink>
+            {/* <FooterLink href="#">Privacy Policy</FooterLink>
+            <FooterLink href="#">Terms of Use</FooterLink> */}
           </FooterLinks>
         </FooterSection>
       </Body>
